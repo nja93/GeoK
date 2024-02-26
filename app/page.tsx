@@ -13,23 +13,23 @@ export default function Home() {
               Trained and Certified Geologists
             </span>
           </h1>
-            <p className="text-black hidden md:block">
-           <strong> Welcome to GeoK, your premier destination for connecting with qualified Kenyan Geologists. Our platform brings together a diverse community of geology experts, ready to assist you in navigating the complexities of the Earth's terrain. Whether you're exploring for resources, researching geological phenomena, or seeking professional guidance, our network offers the expertise you need. Join us in unlocking the secrets of the Earth's past, present, and future with our dedicated team of skilled geologists
-           </strong>
+            <p className="text-black hidden md:block font-semibold">
+           Welcome to GeoK, your premier destination for connecting with qualified Kenyan Geologists. Our platform brings together a diverse community of geology experts, ready to assist you in navigating the complexities of the Earth's terrain. Whether you're exploring for resources, researching geological phenomena, or seeking professional guidance, our network offers the expertise you need. Join us in unlocking the secrets of the Earth's past, present, and future with our dedicated team of skilled geologists
+           
             </p>
             <div className="flex-col md:flex-row hidden md:flex gap-5">
               <Link href="/my-skills" 
               className="rounded-[20px] group relative bg-neutral-900  opacity-40  hover:bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
-                Learn moren
+                Learn More
               </Link>
               <Link href="/my-projects"
-              className="rounded-[20px] group relative  border bg-yellow-900 hover:bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
-                <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-40 group-hver:opacity-20" />
+              className="rounded-[20px] group relative border bg-yellow-900 hover:bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
+                <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-40 group-hover:opacity-20" />
                 My projects
               </Link>
               <Link href="/contact-me"
-               className="rounded-[20px] group relative bg-yellow-900 hover:bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
-                <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-40 group-hver:opacity-20" />
+               className="rounded-[20px] group relative border bg-yellow-900 hover:bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
+                <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-40 group-hover:opacity-20" />
                 Contact me
               </Link>
             </div>
@@ -37,15 +37,15 @@ export default function Home() {
       </div>
       <div className="absolute flex bottom-10 z-[20] right-5 flex-col md:hidden gap-5">
               <Link href="/my-skills" 
-              className="rounded-[20px] group  bg-neutral-900  opacity-40 px-5 py-3 text-lg text-white max-w-[200px]">
+              className="rounded-[20px] group  bg-neutral-900  opacity-40 px-5 py-3s text-lg text-white max-w-[200px]">
                 Learn more
               </Link>
               <Link href="/my-projects"
-              className="rounded-[20px] group relative bg-yellow-900 px-5 py-3 text-lg text-white max-w-[200px]">
+              className="rounded-[20px] group relative bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
                 My projects
               </Link>
               <Link href="/contact-me"
-               className="rounded-[20px] group relative bg-yellow-900 px-5 py-3 text-lg text-white max-w-[200px]">
+               className="rounded-[20px] group relative bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
                 Contact me
               </Link>
             </div>
