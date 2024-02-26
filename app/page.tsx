@@ -22,22 +22,22 @@ export default function Home() {
               className="rounded-[20px] group relative bg-neutral-900  opacity-40  hover:bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
                 Learn More
               </Link>
-              <Link href="/my-projects"
+              <Link href="/search"
               className="rounded-[20px] group relative border bg-yellow-900 hover:bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
                 <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-40 group-hover:opacity-20" />
-                My projects
+                Start Search
               </Link>
-              <Link href="/contact-me"
+              <Link href="/Contact us"
                className="rounded-[20px] group relative border bg-yellow-900 hover:bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
                 <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-40 group-hover:opacity-20" />
-                Contact me
+                Contact Us
               </Link>
             </div>
         </div>
       </div>
       <div className="absolute flex bottom-10 z-[20] right-5 flex-col md:hidden gap-5">
               <Link href="/my-skills" 
-              className="rounded-[20px] group  bg-neutral-900  opacity-40 px-5 py-3s text-lg text-white max-w-[200px]">
+              className="rounded-[20px] group relative bg-neutral-900  opacity-40 px-5 py-3s text-lg text-white max-w-[200px]">
                 Learn more
               </Link>
               <Link href="/my-projects"
