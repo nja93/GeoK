@@ -1,5 +1,5 @@
-import { pgTable, serial, text, unique, foreignKey, bigint, doublePrecision, numeric } from "drizzle-orm/pg-core"
-import { sql } from "drizzle-orm"
+import { relations } from "drizzle-orm";
+import { bigint, pgTable, serial, text, unique } from "drizzle-orm/pg-core";
 
 
 
@@ -44,3 +44,39 @@ export const search = pgTable("search", {
 	membershipNo: text("membership_no"),
 	title: text("title"),
 });
+
+export const profileRelations = relations(profile, ({ many }) => ({
+	profileSpecializations: many(profileSpecialization),
+}));
+
+export const specializationRelations = relations(
+	specialization,
+	({ many }) => ({
+		profileSpecializations: many(profileSpecialization),
+	})
+);
+
+export const profileSpecializationRelations = relations(
+	profileSpecialization,
+	({ one }) => ({
+		profile: one(profile, {
+			fields: [profileSpecialization.profileId],
+			references: [profile.id],
+		}),
+		specialization: one(specialization, {
+			fields: [profileSpecialization.specializationId],
+			references: [specialization.id],
+		}),
+	})
+);
+
+export const searchRelations = relations(search, ({ one }) => ({
+	profile: one(profile, {
+		fields: [search.profileId],
+		references: [profile.id],
+	}),
+	specialization: one(specialization, {
+		fields: [search.specializationId],
+		references: [specialization.id],
+	}),
+}));
