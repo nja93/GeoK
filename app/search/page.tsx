@@ -15,35 +15,38 @@ const Search = async ({
   searchParams: { [key: string]: string | string[] | undefined }
 }) => {
   const q = searchParams['q'] ?? ''
-  const data = await db.query.search.findMany({
-    where: (search, { ilike, or }) => or(ilike(search.membershipNo, `%${q}%`), ilike(search.title, `%${q}%`)),
-    with: {
-      profile: {
-        columns: {
-          firstName: true,
-          lastName: true,
-          profilePhoto: true,
-          email: true,
-          phone1: true,
+  let data = []
+  if (q?.length) {
+    data = await db.query.search.findMany({
+      where: (search, { ilike, or }) => or(ilike(search.membershipNo, `%${q}%`), ilike(search.title, `%${q}%`)),
+      with: {
+        profile: {
+          columns: {
+            firstName: true,
+            lastName: true,
+            profilePhoto: true,
+            email: true,
+            phone1: true,
 
-        },
-        with: {
-          profileSpecializations: {
-            with: {
-              specialization: {
-                columns: {
-                  title: true,
-                }
-              }
-
-            }
           },
+          with: {
+            profileSpecializations: {
+              with: {
+                specialization: {
+                  columns: {
+                    title: true,
+                  }
+                }
+
+              }
+            },
+          }
         }
       }
-    }
-  })
+    })
+  }
   const specializations = data.reduce((acc: any, curr: any) => {
-    const specialization = acc.find((s) => s.specialization! === curr.title);
+    const specialization = acc.find((s) => s.name! === curr.title);
     const person = {
       membershipNo: curr.membershipNo,
       name: `${curr.profile?.firstName} ${curr.profile?.lastName}`,
@@ -52,9 +55,10 @@ const Search = async ({
       phone: curr.profile?.phone1 ?? 'n/a',
     };
     if (specialization) {
+      // const people = [...specialization.people, person]
+      // acc[curr.title] = people;
       specialization.people.push(person);
     } else {
-
       acc.push({ name: curr.title, people: [person] });
     }
     return acc;
@@ -77,8 +81,8 @@ const Search = async ({
       </div>
       <div className="mt-8 flow-root">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-            <table className="min-w-full">
+          <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8 rounded-lg">
+            <table className="min-w-full shadow-lg">
               <thead className="bg-white">
                 <tr>
                   <th
@@ -109,6 +113,13 @@ const Search = async ({
                 </tr>
               </thead>
               <tbody className="bg-white">
+                {specializations.length === 0 && (
+                  <tr >
+                    <td colSpan={5} className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3 text-center">
+                      No records found for '{q}'
+                    </td>
+
+                  </tr>)}
                 {specializations.map((specialization) => (
                   <Fragment key={specialization.name}>
                     <tr className="border-t border-gray-200">
