@@ -1,11 +1,11 @@
+
 import db from '@/db'
 import { Fragment } from "react";
+import SearchBox from '@/components/SearchBox'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
-
-
 
 const Search = async ({
   params,
@@ -60,10 +60,12 @@ const Search = async ({
     return acc;
   }, []);
 
+
   return (
     <div className="px-4 sm:px-6 lg:px-8">
+      <SearchBox />
       <div className="sm:flex sm:items-center">
-        <div className="sm:flex-auto">
+        {/* <div className="sm:flex-auto">
           <h1 className="text-base font-semibold leading-6 text-gray-900">
             Users
           </h1>
@@ -71,7 +73,7 @@ const Search = async ({
             A list of all the users in your account including their name, title,
             email and role.
           </p>
-        </div>
+        </div> */}
       </div>
       <div className="mt-8 flow-root">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
