@@ -19,7 +19,7 @@ export default function Home() {
 
           </p>
           <div className="flex-col md:flex-row hidden md:flex gap-5">
-            <Link href="/my-skills"
+            <Link href="/learn-more"
               className="rounded-[20px] group relative bg-neutral-900  opacity-40  hover:bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
               Learn More
             </Link>
@@ -39,7 +39,7 @@ export default function Home() {
 
       </div>
       <div className="absolute flex bottom-10 z-[20] right-5 flex-col md:hidden gap-5">
-        <Link href="/my-skills"
+        <Link href="/learn-more"
           className="rounded-[20px] group relative bg-neutral-900  opacity-40 px-5 py-3s text-lg text-white max-w-[200px]">
           Learn more
         </Link>
