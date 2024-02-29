@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react'
@@ -13,7 +12,7 @@ import {Autoplay} from 'swiper/modules'
 const page = () => {
   return (
     <div
-    style={{ backgroundImage: "url(/basalts.jpg" }}
+    style={{ backgroundImage: "url(/gemstone.jpg" }}
     className="h-screen w-screen flex items-center justify-center bg-cover bg-center"
   >
     
