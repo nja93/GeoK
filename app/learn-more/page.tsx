@@ -1,5 +1,5 @@
 "use client"
-
+import Link from "next/link";
 import React from 'react'
 import ProjectCard from '@/components/ProjectCard'
 import { Projects } from '@/constants'
@@ -15,7 +15,12 @@ const page = () => {
     style={{ backgroundImage: "url(/gemstone.jpg" }}
     className="h-screen w-screen flex items-center justify-center bg-cover bg-center"
   >
-    
+    <Link href="/search"
+              className="rounded-[20px] group relative border bg-yellow-900 hover:bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
+              <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-40 group-hover:opacity-20" />
+              Start Search
+    </Link>
+            
       <Swiper
         slidesPerView={2}
         loop={true}
@@ -41,8 +46,6 @@ const page = () => {
           ))}
             </Swiper>
       </div>
- 
-   
   )
 }
 

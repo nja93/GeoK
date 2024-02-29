@@ -1,4 +1,3 @@
-
 export const Projects = [
   {
     title: "Hydrology",
@@ -18,6 +17,43 @@ export const Projects = [
   {
     title: "Seismology",
     text: "Seismology is the study of earthquakes and seismic waves that move through and around the Earth",
-    src: "/Seismology.jpg",
+    src: "/Seismology.jfif",
   },
+  {
+    title: "Marine Geology",
+    text: "Marine geology or geological oceanography is the study of the history and structure of the ocean floor.credit:Ocean Exploration Trust",
+    src: "/MarineGeology.jpg",
+  },
+  {
+    title: "Exploration Geology",
+    text: "Exploration geologists are involved in the search for rock and mineral deposits of economic value",
+    src: "/ExplorationGeology.jpg",
+  },
+  {
+    title: "Sedimentary Petrology",
+    text: "Sedimentary petrology is the study of their occurrence, composition, texture, and other overall characteristics, while sedimentology emphasizes the processes by which sediments are transported and deposited. ",
+    src: "/SedimentaryPetrology.jpg",
+  },
+  {
+    title: "GeoChemistry",
+    text: "Geochemistry is the science that uses the tools and principles of chemistry to explain the mechanisms behind major geological systems such as the Earth's crust and its oceans",
+    src: "/GeoChemistry.jpg",
+  },
+  {
+    title: "Geophysics",
+    text: "Geophysics is major branch of the Earth sciences that applies the principles and methods of physics to the study of the Earth",
+    src: "/geophysics.jfif",
+  },
+  {
+    title: "Environmental Geology",
+    text: "Environmental geology, like hydrogeology, is an applied science concerned with the practical application of the principles of geology in the solving of environmental problems created by man.",
+    src: "/EnvironmentalGeology.jpg",
+  },
+  {
+    title: "Quaternary Geology",
+    text: "The Quaternary is the most recent period in the Earth's history: the last 2.6 million years.",
+    src: "/QG.avif",
+  },
+
+
 ];

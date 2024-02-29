@@ -22,7 +22,7 @@ const TransitionVariants = {
 const Transition = () => {
   return (
     <div>
-      <motion.div className="fixed right-0 h-scree bottom-full z-[30] bg-[#2e2257]"
+      <motion.div className="fixed right-0 h-screen bottom-full z-[30] bg-[#2e2257]"
       variants={TransitionVariants}
       initial = "initial"
       exit = "exit"
