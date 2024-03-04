@@ -21,7 +21,7 @@ export default function Home() {
           <div className="flex-col md:flex-row hidden md:flex gap-5">
             <Link href="/learn-more"
               className="rounded-[20px] group relative bg-neutral-900  opacity-40  hover:bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
-              Learn More
+              Start Here
             </Link>
             <Link href="/search"
               className="rounded-[20px] group relative border bg-yellow-900 hover:bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
@@ -41,7 +41,7 @@ export default function Home() {
       <div className="absolute flex bottom-10 z-[20] right-5 flex-col md:hidden gap-5">
         <Link href="/learn-more"
           className="rounded-[20px] group relative bg-neutral-900  opacity-40 px-5 py-3s text-lg text-white max-w-[200px]">
-          Learn more
+          Start Here
         </Link>
         <Link href="/my-projects"
           className="rounded-[20px] group relative bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">

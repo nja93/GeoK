@@ -16,6 +16,7 @@ const SearchBox = () => {
 
 
     return (
+      
         <form onSubmit={executeSearch} className='w-full'>
             <div className="w-full max-w-lg lg:max-w-xs">
                 <label htmlFor="search" className="sr-only">
@@ -42,6 +43,7 @@ const SearchBox = () => {
                 </div>
             </div>
         </form>
+        
     )
 }
 

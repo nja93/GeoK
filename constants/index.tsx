@@ -36,7 +36,7 @@ export const Projects = [
   },
   {
     title: "GeoChemistry",
-    text: "Geochemistry is the science that uses the tools and principles of chemistry to explain the mechanisms behind major geological systems such as the Earth's crust and its oceans",
+    text: "Geochemistry is the science that uses the tools and principles of chemistry to explain the mechanisms behind major geological systems such as the Earth&apos;s crust and its oceans",
     src: "/GeoChemistry.jpg",
   },
   {
@@ -51,7 +51,7 @@ export const Projects = [
   },
   {
     title: "Quaternary Geology",
-    text: "The Quaternary is the most recent period in the Earth's history: the last 2.6 million years.",
+    text: "The Quaternary is the most recent period in the Earth&apos;s history: the last 2.6 million years.",
     src: "/QG.avif",
   },
 
