@@ -18,11 +18,31 @@ export default function Home() {
             Welcome to GeoK, your premier destination for connecting with qualified Kenyan Geologists. Our platform brings together a diverse community of geology experts, ready to assist you in navigating the complexities of the Earth&apos;s terrain. Whether you are exploring for resources, researching geological phenomena, or seeking professional guidance, our network offers the expertise you need. Join us in unlocking the secrets of the Earth&apos;s past, present, and future with our dedicated team of skilled geologists
 
           </p>
+          <div className="flex-col md:flex-row hidden md:flex gap-5">
+            <Link href="/learn-more"
+              className="rounded-[20px] group relative bg-neutral-900  opacity-40  hover:bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
+              Start Here
+            </Link>
 
+          </div>
+          <SearchBox />
         </div>
-        <SearchBox />
-      </div>
 
+      </div>
+      <div className="absolute flex bottom-10 z-[20] right-5 flex-col md:hidden gap-5">
+        <Link href="/learn-more"
+          className="rounded-[20px] group relative bg-neutral-900  opacity-40 px-5 py-3s text-lg text-white max-w-[200px]">
+          Start Here
+        </Link>
+        <Link href="/my-projects"
+          className="rounded-[20px] group relative bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
+          My projects
+        </Link>
+        <Link href="/contact-me"
+          className="rounded-[20px] group relative bg-blue-300 px-5 py-3 text-lg text-white max-w-[200px]">
+          Contact me
+        </Link>
+      </div>
       <div className="absolute bottom-0 right-0 z-[10]"></div>
 
 
