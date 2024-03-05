@@ -6,7 +6,7 @@ const SearchBox = () => {
     const [searchQuery, setSearchQuery] = useState('')
     const router = useRouter()
 
-    const executeSearch = (event) => {
+    const executeSearch = (event: any) => {
         event.preventDefault()
         if (!searchQuery) return;
         console.log('searchQuery', searchQuery)
@@ -16,7 +16,7 @@ const SearchBox = () => {
 
 
     return (
-      
+
         <form onSubmit={executeSearch} className='w-full'>
             <div className="w-full max-w-lg lg:max-w-xs">
                 <label htmlFor="search" className="sr-only">
@@ -43,7 +43,7 @@ const SearchBox = () => {
                 </div>
             </div>
         </form>
-        
+
     )
 }
 

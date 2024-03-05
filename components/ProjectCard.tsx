@@ -37,7 +37,7 @@ const ProjectCard = ({ image, title, text }: Props) => {
           <div className='absolute inset-0 w-full h-full text-[20px] pb-10 hidden group-hover:flex items-center z-[20] justify-center'>
 
 
-            Find a   <a href={`/search?q=${title}`} target="_blank">{title}</a> professional &gt;
+            <a href={`/search?q=${title}`} target="_blank">{title}</a> &gt;
           </div>
 
         </div>
