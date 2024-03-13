@@ -21,7 +21,7 @@ export const Projects = [
   },
   {
     title: "Marine Geology",
-    text: "Marine geology or geological oceanography is the study of the history and structure of the ocean floor.credit:Ocean Exploration Trust",
+    text: "Marine geology or Geological Oceanography is the study of the history and structure of the ocean floor.credit:Ocean Exploration Trust",
     src: "/MarineGeology.jpg",
   },
   {
